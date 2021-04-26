@@ -32,19 +32,19 @@ class App extends Component {
     }
 }
 
-const EkranPowitalny = () => {
+const EkranPowitalny = (props) => {
     return <div>
         <h5>siemaneczko</h5>
         <p>wybierz coś tutaj</p>
-        <button>przejdź dalej</button>
+        <button onClick={() => props.zmienStrone(2)}>przejdź dalej</button>
     </div>
 }
 
-const DrugiEkran = () => {
+const DrugiEkran = ({zmienStrone}) => {
     return <div>
-        <h5>siemaneczko</h5>
-        <p>wybierz coś tutaj</p>
-        <button>przejdź dalej</button>
+        <h5>elo kurwiu</h5>
+        <p>jesteś na drugiej stronie</p>
+        <button onClick={() => zmienStrone(1)}>spierdalamy spowrotem</button>
     </div>
 }
 
